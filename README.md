@@ -1,2 +1,3 @@
 # creative-computing
-this is repo for cc class code to stored.
+
+This is repo for cc class code to be stored.
