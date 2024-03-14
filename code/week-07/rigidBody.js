@@ -3,7 +3,7 @@ class RigidBody {
     this.loc = createVector(x, y);
     this.vel = createVector();
     this.acc = createVector();
-    this.friction = 0.985;
+    this.friction = 0.98;
     this.size = size;
   }
 
@@ -33,5 +33,11 @@ class RigidBody {
 
   display() {
     circle(this.loc.x, this.loc.y, this.size);
+    /*push();
+
+    translate(this.loc.x, this.loc.y);
+    rotate(this.vel.heading() - PI/2);
+    triangle(0, 10, -2, -10, 2, -10);
+    pop();*/
   }
 }
