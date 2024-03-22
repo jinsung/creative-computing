@@ -25,7 +25,14 @@ function setup() {
 
   setInterval(() => {
     if (shapes.length < 3) {
-      this.createCircle(random(width*0.25, width*0.75), -10);
+      const options = {
+        friction: 0, 
+        frictionAir: 0,
+        restitution: 1, 
+        inertia: Infinity
+      }
+      this.createCircle(
+        random(width*0.25, width*0.75), -10, options);
     }
   }, 1000);
 }
