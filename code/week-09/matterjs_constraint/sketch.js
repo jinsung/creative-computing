@@ -29,6 +29,12 @@ function setup() {
     preCircle = circle;
   }
 
+  const matterMouse = Matter.Mouse.create();
+  const mcOptions = {
+    mouse: matterMouse
+  };
+  const mouseConstraint = Matter.MouseConstraint.create(engine, mcOptions);
+  Matter.Composite.add(engine.world, mouseConstraint);
   Matter.Runner.run(engine);
 }
 
